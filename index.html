@@ -145,15 +145,15 @@ nav.open{display:block}nav ul{flex-direction:column}
 
 <section id="branches" class="br"><div class="wrap">
 <div class="h"><h2>الفروع</h2></div>
-<div class="grid" id="brGrid"><article class="card"><div class="b"><span class="demo">بيانات توضيحية</span><h3>فرع القاهرة</h3><p>شارع توضيحي، وسط البلد، القاهرة<br><span dir="ltr">+20 2 2345 6789</span><br>يوميًا 12 ظهرًا – 1 صباحًا</p></div></article></div>
+<div class="grid" id="brGrid"><article class="card"><div class="b"><h3>فرع القاهرة</h3><p>12 شارع محمد محمود، وسط البلد، القاهرة<br><span dir="ltr">+20 109 586 8933</span><br>يوميًا 12 ظهرًا – 1 صباحًا</p></div></article></div>
 </div></section>
 
 <section id="contact" style="padding-top:0"><div class="wrap">
 <div class="h"><h2>تواصل معنا</h2></div>
 <div class="grid">
-<div class="card"><div class="b"><h3>اطلب بالهاتف</h3><p><span class="demo">أرقام توضيحية</span><br>خدمة الطلبات: <a href="tel:+201000001234" dir="ltr">+20 100 000 1234</a><br>الخط الأرضي: <a href="tel:+20223456789" dir="ltr">+20 2 2345 6789</a></p></div></div>
-<div class="card"><div class="b"><h3>واتساب</h3><p><span class="demo">رقم توضيحي</span><br><a href="https://wa.me/201000001234" dir="ltr">+20 100 000 1234</a><br>نرد من 12 ظهرًا حتى 1 صباحًا</p></div></div>
-<div class="card"><div class="b"><h3>مواقع التواصل</h3><p><span class="demo">حسابات توضيحية</span><br>فيسبوك: <span dir="ltr">@mashawy.elbalad</span><br>إنستغرام: <span dir="ltr">@mashawy.elbalad</span><br>البريد: <span dir="ltr">hello@example.com</span></p></div></div>
+<div class="card"><div class="b"><h3>اطلب بالهاتف</h3><p>خدمة الطلبات: <a href="tel:+201095868933" dir="ltr">+20 109 586 8933</a><br>الطلبات والحجز: <a href="tel:+201095868933" dir="ltr">+20 109 586 8933</a></p></div></div>
+<div class="card"><div class="b"><h3>واتساب</h3><p><a href="https://wa.me/201095868933" dir="ltr">+20 109 586 8933</a><br>نرد من 12 ظهرًا حتى 1 صباحًا</p></div></div>
+<div class="card"><div class="b"><h3>مواقع التواصل</h3><p>فيسبوك: <span dir="ltr">@mashawy.elbalad</span><br>إنستغرام: <span dir="ltr">@mashawy.elbalad</span></p></div></div>
 </div></div></section>
 </main>
 <footer><div class="wrap">
@@ -186,7 +186,7 @@ const items=[
 {c:3,n:"عصير ليمون بالنعناع",d:"منعش ومثلّج.",p:40,e:"🍋"},
 {c:3,n:"شاي بالنعناع",d:"لختام الوجبة.",p:25,e:"🍵"}];
 const branches=[
-{n:"فرع القاهرة",a:"شارع توضيحي، وسط البلد، القاهرة",t:"+20 2 2345 6789",h:"يوميًا 12 ظهرًا – 1 صباحًا"}];
+{n:"فرع القاهرة",a:"12 شارع محمد محمود، وسط البلد، القاهرة",t:"+20 109 586 8933",h:"يوميًا 12 ظهرًا – 1 صباحًا"}];
 items.forEach((o,x)=>o.x=x);
 const fmt=p=>p+" ج.م";
 const tabs=document.getElementById("tabs"),list=document.getElementById("list");
@@ -212,7 +212,7 @@ dl.onclick=e=>{if(e.target===dl)dl.close()};
 $("of").onsubmit=e=>{e.preventDefault();if(!cnt())return;const no=Math.floor(1000+Math.random()*9000);
 const lines=Object.entries(cart).map(([k,q])=>`• ${items[k].n} × ${q} = ${fmt(items[k].p*q)}`).join("\n");
 const msg=`طلب جديد #${no} من موقع مشاوي البلد\n${lines}\nالإجمالي: ${fmt(tot())}\nالاسم: ${$("nm").value}\nالهاتف: ${$("ph").value}\nالعنوان: ${$("ad").value}\nملاحظات: ${$("nt").value||"-"}`;
-window.open("https://wa.me/201000001234?text="+encodeURIComponent(msg),"_blank","noopener");
+window.open("https://wa.me/201095868933?text="+encodeURIComponent(msg),"_blank","noopener");
 $("okm").textContent=`رقم طلبك #${no}، والإجمالي ${fmt(tot())}.`;for(const k in cart)delete cart[k];$("of").reset();$("cv").hidden=true;$("ok").hidden=false;draw()};
 </script>
 </body>
